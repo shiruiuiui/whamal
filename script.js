@@ -9,9 +9,11 @@ function scroll() {
 const $team = document.getElementById("team");
 for (const $member of $team.querySelectorAll(".members > div")) {
   let open = false;
-  const $expander = $member.querySelector(".expander");
 
-  $member.querySelector(":scope > header").addEventListener("click", (e) => {
+  const header = $team.querySelector(".members > div > header")
+
+  if(header)
+  header.addEventListener("click", (e) => {
     open = !open;
 
     $member.classList[open ? "add" : "remove"]("open");
