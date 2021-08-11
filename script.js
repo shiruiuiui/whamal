@@ -7,19 +7,19 @@ function scroll() {
 
 // team
 const $team = document.getElementById("team");
-// for (const $member of $team.querySelectorAll(".members > div")) {
-//   let open = false;
-//   const $expander = $member.querySelector(".expander");
+for (const $member of $team.querySelectorAll(".members > div")) {
+  let open = false;
+  const $expander = $member.querySelector(".expander");
 
-//   $member.querySelector(":scope > header").addEventListener("click", (e) => {
-//     open = !open;
+  $member.querySelector(":scope > header").addEventListener("click", (e) => {
+    open = !open;
 
-//     $member.classList[open ? "add" : "remove"]("open");
-//   });
-// }
+    $member.classList[open ? "add" : "remove"]("open");
+  });
+}
 
-var modal = document.getElementById("myModal");
-var button = document.getElementsByClassName("accept")[0];
+const modal = document.getElementById("myModal");
+const button = document.getElementsByClassName("accept")[0];
 
 modal.style.display = "block";
 
