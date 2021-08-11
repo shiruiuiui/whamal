@@ -7,33 +7,24 @@ function scroll() {
 
 // team
 const $team = document.getElementById("team");
-for (const $member of $team.querySelectorAll(".members > div")) {
-  let open = false;
-  const $expander = $member.querySelector(".expander");
+// for (const $member of $team.querySelectorAll(".members > div")) {
+//   let open = false;
+//   const $expander = $member.querySelector(".expander");
 
-  $member.querySelector(":scope > header").addEventListener("click", (e) => {
-    open = !open;
+//   $member.querySelector(":scope > header").addEventListener("click", (e) => {
+//     open = !open;
 
-    $member.classList[open ? "add" : "remove"]("open");
-  });
-}
-// Get the modal
+//     $member.classList[open ? "add" : "remove"]("open");
+//   });
+// }
+
 var modal = document.getElementById("myModal");
+var button = document.getElementsByClassName("accept")[0];
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// open the modal
 modal.style.display = "block";
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
+button.onclick = function () {
   modal.style.display = "none";
 };
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
+

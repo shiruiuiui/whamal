@@ -198,51 +198,78 @@ html:not([data-scroll="0"]) nav .logo {
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 200;
   /* Sit on top */
-  padding-top: 100px;
-  /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
   /* Full width */
   height: 100%;
   /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
   background-color: black;
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
   /* Black w/ opacity */
+  /* Modal Content */
+  /* The Close Button */
 }
 
-/* Modal Content */
-.modal-content {
+.modal .modal-content {
   background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
+  margin: 10vh auto;
+  padding: 32px 32px 16px 32px;
   border: 1px solid #888;
   width: 80%;
+  max-height: calc(100% - 20vh);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
+.modal .modal-content .content {
+  overflow: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.modal .modal-content .content > header {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: green;
+}
+
+.modal .modal-content .content .title {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 16px;
+  padding-bottom: 12px;
+}
+
+.modal .modal-content button {
+  margin-top: 16px;
+}
+
+.modal .accept {
+  color: white;
+  background-color: green;
   float: right;
   font-size: 28px;
   font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
 }
 
 section.hero {
   background-image: url("images/verne-ho-0LAJfSNa-xQ-unsplash.jpg");
-  height: 100vh;
   background-size: cover;
   background-position: center;
   display: -webkit-box;
