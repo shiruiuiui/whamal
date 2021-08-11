@@ -33,6 +33,7 @@ nav {
   box-sizing: border-box;
   color: #ccc;
   transition-duration: 0.3s;
+
   a {
     color: inherit;
     text-decoration: none;
@@ -42,9 +43,10 @@ nav {
   }
   .logo {
     width: 280px;
+    max-width: calc(100vw - 120px);
     transition: width 0.3s;
   }
-  .links .container {
+  .links {
     &:hover a {
       opacity: 0.5;
     }
@@ -68,7 +70,13 @@ nav {
       width: 200px;
     }
   }
+  .menu {
+    display: none;
+  }
   @media screen and (max-width: 1250px) {
+    .links {
+      display: none;
+    }
     .hamburger {
       z-index: 1;
       display: block;
@@ -123,7 +131,7 @@ nav {
         }
       }
     }
-    .links {
+    .menu {
       position: fixed;
       width: 100%;
       height: 100%;
@@ -169,7 +177,7 @@ nav {
           }
         }
       }
-      .links {
+      .menu {
         pointer-events: initial;
         transform: none;
         opacity: 1;

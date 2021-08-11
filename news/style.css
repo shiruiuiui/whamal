@@ -48,21 +48,22 @@ nav .logo-container {
 
 nav .logo {
   width: 280px;
+  max-width: calc(100vw - 120px);
   -webkit-transition: width 0.3s;
   transition: width 0.3s;
 }
 
-nav .links .container:hover a {
+nav .links:hover a {
   opacity: 0.5;
 }
 
-nav .links .container a {
+nav .links a {
   padding: 8px 16px;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 
-nav .links .container a:hover {
+nav .links a:hover {
   opacity: 1;
 }
 
@@ -80,7 +81,14 @@ html:not([data-scroll="0"]) nav .logo {
   width: 200px;
 }
 
+nav .menu {
+  display: none;
+}
+
 @media screen and (max-width: 1250px) {
+  nav .links {
+    display: none;
+  }
   nav .hamburger {
     z-index: 1;
     display: block;
@@ -124,7 +132,7 @@ html:not([data-scroll="0"]) nav .logo {
     top: 36px;
     right: 5px;
   }
-  nav .links {
+  nav .menu {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -149,7 +157,7 @@ html:not([data-scroll="0"]) nav .logo {
     transition: opacity 0.5s, transform 0.5s;
     transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
   }
-  nav .links .container {
+  nav .menu .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -162,7 +170,7 @@ html:not([data-scroll="0"]) nav .logo {
             flex-direction: column;
     text-align: center;
   }
-  nav .links .container a {
+  nav .menu .container a {
     font-size: 32px;
     padding: 16px 0;
   }
@@ -180,7 +188,7 @@ html:not([data-scroll="0"]) nav .logo {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
   }
-  nav.open .links {
+  nav.open .menu {
     pointer-events: initial;
     -webkit-transform: none;
             transform: none;
@@ -207,7 +215,7 @@ html:not([data-scroll="0"]) nav .logo {
 }
 
 #news .news-cards {
-  background-image: url("../Images/milk-01.png");
+  background-image: url("../images/milk-01.png");
   background-position: center;
   background-size: cover;
   display: -webkit-box;

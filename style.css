@@ -49,21 +49,22 @@ nav .logo-container {
 
 nav .logo {
   width: 280px;
+  max-width: calc(100vw - 120px);
   -webkit-transition: width 0.3s;
   transition: width 0.3s;
 }
 
-nav .links .container:hover a {
+nav .links:hover a {
   opacity: 0.5;
 }
 
-nav .links .container a {
+nav .links a {
   padding: 8px 16px;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 
-nav .links .container a:hover {
+nav .links a:hover {
   opacity: 1;
 }
 
@@ -81,7 +82,14 @@ html:not([data-scroll="0"]) nav .logo {
   width: 200px;
 }
 
+nav .menu {
+  display: none;
+}
+
 @media screen and (max-width: 1250px) {
+  nav .links {
+    display: none;
+  }
   nav .hamburger {
     z-index: 1;
     display: block;
@@ -125,7 +133,7 @@ html:not([data-scroll="0"]) nav .logo {
     top: 36px;
     right: 5px;
   }
-  nav .links {
+  nav .menu {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -150,7 +158,7 @@ html:not([data-scroll="0"]) nav .logo {
     transition: opacity 0.5s, transform 0.5s;
     transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
   }
-  nav .links .container {
+  nav .menu .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -163,7 +171,7 @@ html:not([data-scroll="0"]) nav .logo {
             flex-direction: column;
     text-align: center;
   }
-  nav .links .container a {
+  nav .menu .container a {
     font-size: 32px;
     padding: 16px 0;
   }
@@ -181,7 +189,7 @@ html:not([data-scroll="0"]) nav .logo {
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
   }
-  nav.open .links {
+  nav.open .menu {
     pointer-events: initial;
     -webkit-transform: none;
             transform: none;
@@ -429,7 +437,7 @@ section.hero .shading h2 {
 }
 
 #platform-services {
-  background-image: url("Images/milk-01.png");
+  background-image: url("images/milk-01.png");
   background-position: center;
   background-size: cover;
   padding: 100px 32px;
@@ -524,7 +532,7 @@ section.hero .shading h2 {
 }
 
 #due-diligence {
-  background-image: url("Images/matthew-henry-VviFtDJakYk-unsplash.jpg");
+  background-image: url("images/matthew-henry-VviFtDJakYk-unsplash.jpg");
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -577,7 +585,7 @@ section.hero .shading h2 {
 }
 
 #team {
-  background-image: url("Images/milk-01.png");
+  background-image: url("images/milk-01.png");
   background-position: center;
   background-size: cover;
   padding: 100px 32px;
@@ -686,73 +694,6 @@ section.hero .shading h2 {
 
 #team .members > div:not(.open) > header .expander::before {
   content: "+";
-}
-
-#old-team {
-  background-color: green;
-  padding: 32px;
-}
-
-#old-team > header {
-  font-size: 32px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-#old-team .members {
-  background-color: #f8f8f8;
-  padding: 32px;
-}
-
-#old-team .members > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 32px;
-}
-
-#old-team .members > div img {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-
-#old-team .members > div .content {
-  margin-left: 32px;
-}
-
-#old-team .members > div .content > header {
-  padding: 16px 0;
-  color: green;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-#old-team .members > div .content .bio {
-  line-height: 1.5;
-}
-
-#old-team .members > div:nth-child(2n) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
-#old-team .members > div:nth-child(2n) .content {
-  margin: 0 32px 0 0;
-  text-align: right;
-}
-
-#old-team .members img {
-  border-radius: 50%;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  width: 200px;
 }
 
 #contact {

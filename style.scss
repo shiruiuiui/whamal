@@ -154,7 +154,7 @@ section.hero {
 }
 
 #platform-services {
-  background-image: url("Images/milk-01.png");
+  background-image: url("images/milk-01.png");
   background-position: center;
   background-size: cover;
   padding: 100px 32px;
@@ -228,7 +228,7 @@ section.hero {
 }
 
 #due-diligence {
-  background-image: url("Images/matthew-henry-VviFtDJakYk-unsplash.jpg");
+  background-image: url("images/matthew-henry-VviFtDJakYk-unsplash.jpg");
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -270,7 +270,7 @@ section.hero {
 }
 
 #team {
-  background-image: url("Images/milk-01.png");
+  background-image: url("images/milk-01.png");
   background-position: center;
   background-size: cover;
   padding: 100px 32px;
@@ -358,54 +358,6 @@ section.hero {
           }
         }
       }
-    }
-  }
-}
-
-#old-team {
-  background-color: green;
-  padding: 32px;
-  > header {
-    font-size: 32px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    margin-bottom: 32px;
-  }
-  .members {
-    background-color: #f8f8f8;
-    padding: 32px;
-    > div {
-      display: flex;
-      align-items: center;
-      margin: 32px;
-      img {
-        flex-shrink: 0;
-      }
-      .content {
-        margin-left: 32px;
-        > header {
-          padding: 16px 0;
-          color: green;
-          font-size: 24px;
-          font-weight: bold;
-        }
-        .bio {
-          line-height: 1.5;
-        }
-      }
-      &:nth-child(2n) {
-        flex-direction: row-reverse;
-        .content {
-          margin: 0 32px 0 0;
-          text-align: right;
-        }
-      }
-    }
-    img {
-      border-radius: 50%;
-      flex-shrink: 0;
-      width: 200px;
     }
   }
 }
