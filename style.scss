@@ -3,44 +3,60 @@
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  z-index: 200; /* Sit on top */
+  //padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10vh auto;
+    padding: 32px 32px 16px 32px;
+    border: 1px solid #888;
+    width: 80%;
+    max-height: calc(100% - 20vh);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    .content {
+      overflow: auto;
+      flex: 1;
+      > header {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        color: green;
+      }
+      .title {
+        text-align: center;
+        font-weight: bold;
+        padding-top: 16px;
+        padding-bottom: 12px;
+      }
+    }
+    button {
+      margin-top: 16px;
+    }
+  }
+  /* The Close Button */
+  .accept {
+    color: white;
+    background-color: green;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+  }
 }
 
 section.hero {
   background-image: url("images/verne-ho-0LAJfSNa-xQ-unsplash.jpg");
-  height: 100vh;
   background-size: cover;
   background-position: center;
   display: flex;
