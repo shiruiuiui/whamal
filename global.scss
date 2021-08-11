@@ -1,0 +1,183 @@
+@import "./ext.scss";
+
+$primary-color: #16aa07;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  scroll-behavior: smooth;
+  --nav-height: 72px;
+}
+
+// Scroll offset
+section::before {
+  content: "";
+  display: block;
+  height: 80px;
+  margin: -80px 0 0;
+}
+
+nav {
+  background: linear-gradient(black, transparent);
+  height: 108px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  box-sizing: border-box;
+  color: #ccc;
+  transition-duration: 0.3s;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .logo-container {
+    flex: 1;
+  }
+  .logo {
+    width: 280px;
+    transition: width 0.3s;
+  }
+  .links .container {
+    &:hover a {
+      opacity: 0.5;
+    }
+    a {
+      padding: 8px 16px;
+      transition: opacity 0.3s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+  html:not([data-scroll="0"]) & {
+    height: var(--nav-height);
+    background: white;
+    color: #1a1a1a;
+    .logo {
+      width: 200px;
+    }
+  }
+  @media screen and (max-width: 1250px) {
+    .hamburger {
+      z-index: 1;
+      display: block;
+      flex-shrink: 0;
+      position: relative;
+      width: 51px;
+      height: 51px;
+
+      cursor: pointer;
+
+      .bar {
+        position: absolute;
+
+        width: 41px;
+        height: 2px;
+
+        background: currentColor;
+
+        transition: all 0.3s ease;
+
+        pointer-events: none;
+
+        &:nth-child(1) {
+          top: 10px;
+          left: 5px;
+        }
+
+        &:nth-child(2) {
+          top: 23px;
+          left: 5px;
+
+          &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 41px;
+            height: 2px;
+
+            background: currentColor;
+
+            transition: all 0.3s ease;
+
+            content: "";
+            pointer-events: none;
+          }
+        }
+
+        &:nth-child(3) {
+          top: 36px;
+          right: 5px;
+        }
+      }
+    }
+    .links {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #000c;
+
+      pointer-events: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transform: translateY(-5%);
+      transition: opacity 0.5s, transform 0.5s;
+
+      .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        a {
+          font-size: 32px;
+          padding: 16px 0;
+        }
+      }
+    }
+
+    &.open {
+      color: #ccc !important;
+      .hamburger {
+        .bar {
+          &:nth-child(1),
+          &:nth-child(3) {
+            width: 0;
+          }
+
+          &:nth-child(2) {
+            transform: rotate(-45deg);
+
+            &:after {
+              transform: rotate(-90deg);
+            }
+          }
+        }
+      }
+      .links {
+        pointer-events: initial;
+        transform: none;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.nav-offset {
+  height: var(--nav-height);
+}
