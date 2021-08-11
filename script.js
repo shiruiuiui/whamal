@@ -7,16 +7,13 @@ function scroll() {
 
 // team
 const $team = document.getElementById("team");
-for (const $member of $team.querySelectorAll(".members > div")) {
+for (const $header of $team.querySelectorAll(".members > div > header")) {
   let open = false;
 
-  const header = $team.querySelector(".members > div > header")
-
-  if(header)
-  header.addEventListener("click", (e) => {
+  $header.addEventListener("click", (e) => {
     open = !open;
 
-    $member.classList[open ? "add" : "remove"]("open");
+    $header.parentElement.classList[open ? "add" : "remove"]("open");
   });
 }
 
