@@ -278,6 +278,7 @@ nav .menu {
 
 section.hero {
   background-image: url("images/verne-ho-0LAJfSNa-xQ-unsplash.jpg");
+  height: 100vh;
   background-size: cover;
   background-position: center;
   display: -webkit-box;
