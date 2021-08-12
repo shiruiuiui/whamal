@@ -17,13 +17,5 @@ for (const $header of $team.querySelectorAll(".members > div > header")) {
   });
 }
 
-const modal = document.getElementById("myModal");
-const button = document.getElementsByClassName("accept")[0];
-
-modal.style.display = "block";
-
-button.onclick = function () {
-  modal.style.display = "none";
-};
 
 

@@ -16,3 +16,15 @@
     $nav.classList[open ? "add" : "remove"]("open");
   }
 })();
+
+// modal
+const modal = document.getElementById("disclaimer-modal");
+const button = document.getElementsByClassName("accept")[0];
+
+if (!window.localStorage.getItem("disclaimer-accepted"))
+  modal.style.display = "block";
+
+button.onclick = function () {
+  modal.style.display = "none";
+  window.localStorage.setItem("disclaimer-accepted", true);
+};
