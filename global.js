@@ -5,7 +5,7 @@
   let open = false;
 
   $nav.querySelector(".hamburger").addEventListener("click", toggle);
-  $nav.querySelector(".links").addEventListener("click", () => {
+  $nav.querySelector(".menu").addEventListener("click", () => {
     open = false;
     $nav.classList.remove("open");
   });
@@ -27,4 +27,14 @@ if (!window.localStorage.getItem("disclaimer-accepted"))
 button.onclick = function () {
   modal.style.display = "none";
   window.localStorage.setItem("disclaimer-accepted", true);
+};
+
+// Scroll animations
+window.createShowObserver = (target, options) => {
+  return new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if(entry.isIntersecting)
+      entry.target.classList.add("show");
+    }
+  }, options).observe(target);
 };

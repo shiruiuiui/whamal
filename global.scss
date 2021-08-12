@@ -49,15 +49,21 @@ nav {
     transition: width 0.3s;
   }
   .links {
+    a {
+      padding: 8px 16px;
+    }
+  }
+  .links,
+  .menu {
+    a {
+      transition: opacity 0.3s;
+    }
     &:hover a {
       opacity: 0.5;
     }
-    a {
-      padding: 8px 16px;
-      transition: opacity 0.3s;
-      &:hover {
-        opacity: 1;
-      }
+
+    a:hover {
+      opacity: 1;
     }
   }
 

@@ -17,5 +17,5 @@ for (const $header of $team.querySelectorAll(".members > div > header")) {
   });
 }
 
-
+window.createShowObserver(document.querySelector('#overview .container'));
 
