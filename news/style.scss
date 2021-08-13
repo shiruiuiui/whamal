@@ -29,9 +29,9 @@
       line-height: 1.5;
       box-sizing: border-box;
 
-      // transition: box-shadow 0.3s, transform 0.3s;
       animation: fade-up 0.5s calc(var(--i) * 0.1s);
       animation-fill-mode: backwards;
+      transition: box-shadow 0.3s, transform 0.3s;
       @keyframes fade-up {
         from {
           opacity: 0;
